@@ -9,7 +9,7 @@ class BidsControllerTest < ActionController::TestCase
 
     post :create, bid: {user_id: user, product_id: products(:three)}, product_id: products(:three)    
     assert_equal 2, Bid.count
-    assert_redirected_to landing_page_path
+    assert_redirected_to pages_landing_path
   end
 
   test "user should create bids" do
@@ -24,6 +24,6 @@ class BidsControllerTest < ActionController::TestCase
     user = users(:seller)
     post :create, bid: {user_id: user, product_id: products(:three)}, product_id: products(:three)    
     assert_equal 2, Bid.count
-    assert_redirected_to landing_page_path
+    assert_redirected_to pages_landing_path
   end
 end

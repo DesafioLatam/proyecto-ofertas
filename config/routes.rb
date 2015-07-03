@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/landing'
+
   devise_for :users
 
   resources :products, only: [:index] do
