@@ -1,7 +1,7 @@
 class BidsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
-    @bid = @product.bids.build()
+    @bid = @product.bids.build(bid_params)
     @bid.save
     redirect_to root_path
   end
