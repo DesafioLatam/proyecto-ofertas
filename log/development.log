@@ -573,3 +573,1210 @@ Processing by ProductsController#index as HTML
   Rendered products/index.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 80ms (Views: 76.2ms | ActiveRecord: 0.0ms)
   [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+
+
+Started GET "/" for ::1 at 2015-07-02 20:00:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.3) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.3) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/gonzalosanchez/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/gonzalosanchez/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/gonzalosanchez/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (49.8ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (114.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20150703005331)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (23.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::DuplicateTable: ERROR:  relation "users" already exists
+: CREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (7.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducts (20150701013538)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (7.2ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "name" character varying, "description" text, "price" decimal, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150701013538"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateBids (20150701013841)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "bids" ("id" serial primary key, "user_id" integer, "product_id" integer, "amount" decimal, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_bids_on_user_id" ON "bids"  ("user_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_bids_on_product_id" ON "bids"  ("product_id")[0m
+  [1m[35m (3.1ms)[0m  ALTER TABLE "bids" ADD CONSTRAINT "fk_rails_e173de2ed3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+PG::UndefinedTable: ERROR:  relation "users" does not exist
+: ALTER TABLE "bids" ADD CONSTRAINT "fk_rails_e173de2ed3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20150700000000)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150700000000"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateBids (20150701013841)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "bids" ("id" serial primary key, "user_id" integer, "product_id" integer, "amount" decimal, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_bids_on_user_id" ON "bids"  ("user_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_bids_on_product_id" ON "bids"  ("product_id")[0m
+  [1m[35m (5.3ms)[0m  ALTER TABLE "bids" ADD CONSTRAINT "fk_rails_e173de2ed3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (2.3ms)[0m  [1mALTER TABLE "bids" ADD CONSTRAINT "fk_rails_4aac2f19d2"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150701013841"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'bids'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2015-07-02 20:04:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 19ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bids" for ::1 at 2015-07-02 20:04:17 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bids"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/gonzalosanchez/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/gonzalosanchez/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/gonzalosanchez/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (87.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (49.8ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (113.5ms)
+
+
+Started GET "/bids" for ::1 at 2015-07-02 20:04:31 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bids"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/gonzalosanchez/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/gonzalosanchez/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/gonzalosanchez/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.0ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (42.8ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (97.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-02 20:04:34 -0500
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1875ms (Views: 1872.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-02 20:06:59 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.7ms)
+
+ActionView::Template::Error (Missing partial products/_products, application/_products with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/gonzalosanchez/proyectos/clases/bootcampv2/proyecto-ofertas/app/views"
+  * "/Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/devise-3.5.1/app/views"
+):
+    1: <%= render partial: "products", collection: @products %>
+  app/views/products/index.html.erb:1:in `_app_views_products_index_html_erb___1019790415034187043_70104668711040'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (100.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-02 20:07:12 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (0.0ms)
+  Rendered products/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:07:12 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:07:12 -0500
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:07:12 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:07:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:07:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:07:12 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:07:12 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:07:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:07:12 -0500
+
+
+Started GET "/" for ::1 at 2015-07-02 20:07:25 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (0.0ms)
+  Rendered products/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:07:25 -0500
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:07:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:07:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:07:25 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:07:25 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:07:25 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:07:25 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:07:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:07:25 -0500
+
+
+Started GET "/" for ::1 at 2015-07-02 20:07:40 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (0.0ms)
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:07:40 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:07:40 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:07:40 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:07:41 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:07:41 -0500
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:07:41 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:07:41 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:07:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:07:41 -0500
+
+
+Started GET "/" for ::1 at 2015-07-02 20:08:03 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (0.0ms)
+  Rendered products/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:08:03 -0500
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:08:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:08:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:08:03 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:08:03 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:08:03 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:08:03 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:08:03 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:08:03 -0500
+
+
+Started GET "/" for ::1 at 2015-07-02 20:09:26 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (0.0ms)
+  Rendered products/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:09:26 -0500
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:09:26 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:09:26 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:09:26 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:09:26 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:09:26 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:09:26 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:09:26 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:09:26 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 0"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.677136"], ["updated_at", "2015-07-03 01:09:44.677136"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 1"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.684095"], ["updated_at", "2015-07-03 01:09:44.684095"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 2"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.687032"], ["updated_at", "2015-07-03 01:09:44.687032"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 3"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.688896"], ["updated_at", "2015-07-03 01:09:44.688896"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 4"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.690977"], ["updated_at", "2015-07-03 01:09:44.690977"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 5"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.692829"], ["updated_at", "2015-07-03 01:09:44.692829"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 6"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.694740"], ["updated_at", "2015-07-03 01:09:44.694740"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 7"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.697241"], ["updated_at", "2015-07-03 01:09:44.697241"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 8"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.699259"], ["updated_at", "2015-07-03 01:09:44.699259"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 9"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.701144"], ["updated_at", "2015-07-03 01:09:44.701144"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 10"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.703004"], ["updated_at", "2015-07-03 01:09:44.703004"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 11"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.705135"], ["updated_at", "2015-07-03 01:09:44.705135"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 12"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.707000"], ["updated_at", "2015-07-03 01:09:44.707000"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 13"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.708754"], ["updated_at", "2015-07-03 01:09:44.708754"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 14"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.710857"], ["updated_at", "2015-07-03 01:09:44.710857"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 15"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.712860"], ["updated_at", "2015-07-03 01:09:44.712860"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 16"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.714678"], ["updated_at", "2015-07-03 01:09:44.714678"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 17"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.716371"], ["updated_at", "2015-07-03 01:09:44.716371"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 18"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.717943"], ["updated_at", "2015-07-03 01:09:44.717943"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 19"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.719543"], ["updated_at", "2015-07-03 01:09:44.719543"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 20"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.721122"], ["updated_at", "2015-07-03 01:09:44.721122"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 21"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.722871"], ["updated_at", "2015-07-03 01:09:44.722871"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 22"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.724695"], ["updated_at", "2015-07-03 01:09:44.724695"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 23"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.726239"], ["updated_at", "2015-07-03 01:09:44.726239"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 24"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.728152"], ["updated_at", "2015-07-03 01:09:44.728152"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 25"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.730004"], ["updated_at", "2015-07-03 01:09:44.730004"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 26"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.731715"], ["updated_at", "2015-07-03 01:09:44.731715"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 27"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.733296"], ["updated_at", "2015-07-03 01:09:44.733296"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 28"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.735134"], ["updated_at", "2015-07-03 01:09:44.735134"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 29"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.737114"], ["updated_at", "2015-07-03 01:09:44.737114"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 30"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.738737"], ["updated_at", "2015-07-03 01:09:44.738737"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 31"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.740214"], ["updated_at", "2015-07-03 01:09:44.740214"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 32"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.741663"], ["updated_at", "2015-07-03 01:09:44.741663"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 33"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.743649"], ["updated_at", "2015-07-03 01:09:44.743649"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 34"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.745689"], ["updated_at", "2015-07-03 01:09:44.745689"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 35"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.747556"], ["updated_at", "2015-07-03 01:09:44.747556"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 36"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.749273"], ["updated_at", "2015-07-03 01:09:44.749273"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 37"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.751042"], ["updated_at", "2015-07-03 01:09:44.751042"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 38"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.752704"], ["updated_at", "2015-07-03 01:09:44.752704"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 39"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.754280"], ["updated_at", "2015-07-03 01:09:44.754280"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 40"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.755792"], ["updated_at", "2015-07-03 01:09:44.755792"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 41"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.757226"], ["updated_at", "2015-07-03 01:09:44.757226"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 42"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.758819"], ["updated_at", "2015-07-03 01:09:44.758819"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 43"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.760643"], ["updated_at", "2015-07-03 01:09:44.760643"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 44"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.762545"], ["updated_at", "2015-07-03 01:09:44.762545"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 45"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.764512"], ["updated_at", "2015-07-03 01:09:44.764512"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 46"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.766174"], ["updated_at", "2015-07-03 01:09:44.766174"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 47"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.768081"], ["updated_at", "2015-07-03 01:09:44.768081"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 48"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.769821"], ["updated_at", "2015-07-03 01:09:44.769821"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 49"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.771633"], ["updated_at", "2015-07-03 01:09:44.771633"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 50"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.773320"], ["updated_at", "2015-07-03 01:09:44.773320"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 51"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.774844"], ["updated_at", "2015-07-03 01:09:44.774844"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 52"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.776253"], ["updated_at", "2015-07-03 01:09:44.776253"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 53"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.778958"], ["updated_at", "2015-07-03 01:09:44.778958"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 54"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.780828"], ["updated_at", "2015-07-03 01:09:44.780828"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 55"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.782593"], ["updated_at", "2015-07-03 01:09:44.782593"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 56"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.784392"], ["updated_at", "2015-07-03 01:09:44.784392"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 57"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.786082"], ["updated_at", "2015-07-03 01:09:44.786082"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 58"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.787702"], ["updated_at", "2015-07-03 01:09:44.787702"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 59"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.789216"], ["updated_at", "2015-07-03 01:09:44.789216"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 60"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.791062"], ["updated_at", "2015-07-03 01:09:44.791062"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 61"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.792598"], ["updated_at", "2015-07-03 01:09:44.792598"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 62"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.794323"], ["updated_at", "2015-07-03 01:09:44.794323"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 63"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.796402"], ["updated_at", "2015-07-03 01:09:44.796402"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 64"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.798726"], ["updated_at", "2015-07-03 01:09:44.798726"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 65"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.801330"], ["updated_at", "2015-07-03 01:09:44.801330"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 66"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.803167"], ["updated_at", "2015-07-03 01:09:44.803167"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 67"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.804996"], ["updated_at", "2015-07-03 01:09:44.804996"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 68"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.806866"], ["updated_at", "2015-07-03 01:09:44.806866"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 69"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.809082"], ["updated_at", "2015-07-03 01:09:44.809082"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 70"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.810929"], ["updated_at", "2015-07-03 01:09:44.810929"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 71"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.812754"], ["updated_at", "2015-07-03 01:09:44.812754"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 72"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.814633"], ["updated_at", "2015-07-03 01:09:44.814633"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 73"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.816316"], ["updated_at", "2015-07-03 01:09:44.816316"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 74"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.818541"], ["updated_at", "2015-07-03 01:09:44.818541"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 75"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.820298"], ["updated_at", "2015-07-03 01:09:44.820298"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 76"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.822235"], ["updated_at", "2015-07-03 01:09:44.822235"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 77"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.824211"], ["updated_at", "2015-07-03 01:09:44.824211"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 78"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.825697"], ["updated_at", "2015-07-03 01:09:44.825697"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 79"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.827770"], ["updated_at", "2015-07-03 01:09:44.827770"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 80"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.830104"], ["updated_at", "2015-07-03 01:09:44.830104"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 81"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.831799"], ["updated_at", "2015-07-03 01:09:44.831799"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 82"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.833441"], ["updated_at", "2015-07-03 01:09:44.833441"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 83"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.835001"], ["updated_at", "2015-07-03 01:09:44.835001"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 84"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.836514"], ["updated_at", "2015-07-03 01:09:44.836514"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 85"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.838032"], ["updated_at", "2015-07-03 01:09:44.838032"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 86"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.839519"], ["updated_at", "2015-07-03 01:09:44.839519"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 87"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.841146"], ["updated_at", "2015-07-03 01:09:44.841146"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 88"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.842794"], ["updated_at", "2015-07-03 01:09:44.842794"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 89"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.845000"], ["updated_at", "2015-07-03 01:09:44.845000"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 90"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.846638"], ["updated_at", "2015-07-03 01:09:44.846638"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 91"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.848283"], ["updated_at", "2015-07-03 01:09:44.848283"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 92"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.850032"], ["updated_at", "2015-07-03 01:09:44.850032"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 93"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.851916"], ["updated_at", "2015-07-03 01:09:44.851916"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 94"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.853700"], ["updated_at", "2015-07-03 01:09:44.853700"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 95"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.855271"], ["updated_at", "2015-07-03 01:09:44.855271"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 96"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.856850"], ["updated_at", "2015-07-03 01:09:44.856850"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 97"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.858381"], ["updated_at", "2015-07-03 01:09:44.858381"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Producto 98"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.860207"], ["updated_at", "2015-07-03 01:09:44.860207"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Producto 99"], ["description", "generico"], ["price", "100.0"], ["created_at", "2015-07-03 01:09:44.862714"], ["updated_at", "2015-07-03 01:09:44.862714"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2015-07-02 20:09:50 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (1.1ms)
+  Rendered products/index.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 4.0ms)
+
+SyntaxError (/Users/gonzalosanchez/proyectos/clases/bootcampv2/proyecto-ofertas/app/views/products/_product.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+...m_for [product, Bid.new] do f );@output_buffer.safe_append='
+...                               ^
+/Users/gonzalosanchez/proyectos/clases/bootcampv2/proyecto-ofertas/app/views/products/_product.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/gonzalosanchez/proyectos/clases/bootcampv2/proyecto-ofertas/app/views/products/_product.html.erb:8: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/products/_product.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+  app/views/products/_product.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/products/_product.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+  app/views/products/index.html.erb:1:in `_app_views_products_index_html_erb___1019790415034187043_70104636789180'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.1ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (51.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (113.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-02 20:10:07 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (43.9ms)
+  Rendered products/index.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:10:07 -0500
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:10:07 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:10:07 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:10:07 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:10:07 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:10:07 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:10:07 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:10:07 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:10:07 -0500
+
+
+Started POST "/products/1/bids" for ::1 at 2015-07-02 20:10:10 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ulRRFS4iNkucOGnI7rtvWtgZ5JOfbjgT3FBnfqnPvo0bLE1of7pUXt6HE/ObSq6ecg6DjXLuje665Nb6kvXASQ==", "commit"=>"crear", "product_id"=>"1"}
+  Rendered bids/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/1/bids" for ::1 at 2015-07-02 20:11:07 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ulRRFS4iNkucOGnI7rtvWtgZ5JOfbjgT3FBnfqnPvo0bLE1of7pUXt6HE/ObSq6ecg6DjXLuje665Nb6kvXASQ==", "commit"=>"crear", "product_id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.0ms)
+
+NoMethodError (undefined method `bids' for #<Product:0x007f850318d190>):
+  app/controllers/bids_controller.rb:4:in `create'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (47.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (106.1ms)
+
+
+Started POST "/products/1/bids" for ::1 at 2015-07-02 20:11:28 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ulRRFS4iNkucOGnI7rtvWtgZ5JOfbjgT3FBnfqnPvo0bLE1of7pUXt6HE/ObSq6ecg6DjXLuje665Nb6kvXASQ==", "commit"=>"crear", "product_id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 400 Bad Request in 56ms (ActiveRecord: 3.9ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: bid):
+  app/controllers/bids_controller.rb:11:in `bid_params'
+  app/controllers/bids_controller.rb:4:in `create'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.8ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (45.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (95.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-02 20:13:29 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (38.2ms)
+  Rendered products/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 83ms (Views: 75.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:13:29 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:13:29 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:13:29 -0500
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:13:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:13:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:13:29 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:13:29 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:13:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:13:29 -0500
+
+
+Started POST "/products/1/bids" for ::1 at 2015-07-02 20:13:30 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1tOzKAHLB3hQI/0P9m2YwqWOwwqbRzt3n2+Ulimjif53q69VUFNlbRKchzSDnFkGD5mkFHbHjor52yUSEpn3Og==", "commit"=>"Ofertar", "product_id"=>"1"}
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.8ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: bid):
+  app/controllers/bids_controller.rb:11:in `bid_params'
+  app/controllers/bids_controller.rb:4:in `create'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.2ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (70.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (134.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-02 20:14:22 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (42.3ms)
+  Rendered products/index.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 91ms (Views: 88.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:14:22 -0500
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:14:22 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:14:22 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:14:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:14:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:14:22 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:14:22 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:14:22 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:14:22 -0500
+
+
+Started POST "/products/1/bids" for ::1 at 2015-07-02 20:14:24 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WTbwwM18tmP0iZZybm3XjbK8PbVWnUChT8u/cSI+eRT4Tuy9nOTUdrY27EkbnBZJGKtaq7sd9Vwpfw71GQQH0A==", "commit"=>"Ofertar", "product_id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.4ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: bid):
+  app/controllers/bids_controller.rb:11:in `bid_params'
+  app/controllers/bids_controller.rb:4:in `create'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.9ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (47.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (107.4ms)
+
+
+Started POST "/products/1/bids" for ::1 at 2015-07-02 20:15:14 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WTbwwM18tmP0iZZybm3XjbK8PbVWnUChT8u/cSI+eRT4Tuy9nOTUdrY27EkbnBZJGKtaq7sd9Vwpfw71GQQH0A==", "commit"=>"Ofertar", "product_id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 400 Bad Request in 14ms (ActiveRecord: 3.3ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: bid):
+  app/controllers/bids_controller.rb:11:in `bid_params'
+  app/controllers/bids_controller.rb:4:in `create'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.9ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (49.9ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (107.7ms)
+
+
+Started GET "/" for ::1 at 2015-07-02 20:17:01 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (44.2ms)
+  Rendered products/index.html.erb within layouts/application (51.1ms)
+Completed 200 OK in 91ms (Views: 87.9ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/products/1/bids" for ::1 at 2015-07-02 20:17:02 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fs92oYLWkLV+UyCqgu0R40+KyqP+e9YmU/oMN+ErmqG3t2rc007yoDzsWpH3HNAn5Z2tvRP7Y9s1Tr2z2hHkZQ==", "commit"=>"Ofertar", "product_id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.4ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: bid):
+  app/controllers/bids_controller.rb:11:in `bid_params'
+  app/controllers/bids_controller.rb:4:in `create'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (43.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (104.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-02 20:17:41 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (29.5ms)
+  Rendered products/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 75ms (Views: 73.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:17:41 -0500
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:17:41 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:17:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:17:41 -0500
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:17:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:17:41 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:17:41 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:17:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:17:41 -0500
+
+
+Started POST "/products/1/bids" for ::1 at 2015-07-02 20:17:42 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxUzozQ0V+gRMTLJ+5IA1VwTMEQu6amN81n4k3J2nS32bS/eZaw1/VOOSPKOY8ER9gRXWsNpHHCV7UkXSUzj6Q==", "commit"=>"Ofertar", "product_id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.2ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: bid):
+  app/controllers/bids_controller.rb:11:in `bid_params'
+  app/controllers/bids_controller.rb:4:in `create'
+
+
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.1ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (53.2ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/gonzalosanchez/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (117.6ms)
+
+
+Started POST "/products/1/bids" for ::1 at 2015-07-02 20:17:49 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxUzozQ0V+gRMTLJ+5IA1VwTMEQu6amN81n4k3J2nS32bS/eZaw1/VOOSPKOY8ER9gRXWsNpHHCV7UkXSUzj6Q==", "commit"=>"Ofertar", "product_id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "bids" ("product_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["product_id", 1], ["created_at", "2015-07-03 01:17:49.682622"], ["updated_at", "2015-07-03 01:17:49.682622"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered bids/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 92ms (Views: 35.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:17:49 -0500
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:17:49 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:17:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:17:49 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:17:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:17:49 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:17:49 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:17:49 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:17:49 -0500
+
+
+Started POST "/products/1/bids" for ::1 at 2015-07-02 20:17:58 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxUzozQ0V+gRMTLJ+5IA1VwTMEQu6amN81n4k3J2nS32bS/eZaw1/VOOSPKOY8ER9gRXWsNpHHCV7UkXSUzj6Q==", "commit"=>"Ofertar", "product_id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "bids" ("product_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["product_id", 1], ["created_at", "2015-07-03 01:17:58.991139"], ["updated_at", "2015-07-03 01:17:58.991139"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2015-07-02 20:17:58 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (34.8ms)
+  Rendered products/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bids.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:17:59 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-02 20:17:59 -0500
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-02 20:17:59 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-02 20:17:59 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-02 20:17:59 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-02 20:17:59 -0500
+
+
+Started GET "/assets/bids.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:17:59 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-02 20:17:59 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-02 20:17:59 -0500
+  [1m[36mBid Load (1.0ms)[0m  [1mSELECT  "bids".* FROM "bids"  ORDER BY "bids"."id" DESC LIMIT 1[0m
+
+
+Started GET "/" for ::1 at 2015-07-02 20:18:19 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (44.2ms)
+  Rendered products/index.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 91ms (Views: 89.5ms | ActiveRecord: 0.6ms)
