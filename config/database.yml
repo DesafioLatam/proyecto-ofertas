@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: deremate_development
+
+test:
+  <<: *default
+  database: deremate_test
+
+production:
+  <<: *default
+  database: deremate_production
+  username: deremate
+  password: <%= ENV['DEREMATE_DATABASE_PASSWORD'] %>
