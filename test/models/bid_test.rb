@@ -10,12 +10,12 @@ class BidTest < ActiveSupport::TestCase
   # end
   test 'should have an user' do
     @bid.user = nil
-    assert_not bid.valid?
+    assert_not @bid.valid?
   end
 
   test 'should have a product' do
     @bid.product = nil
-    assert_not bid.valid?
+    assert_not @bid.valid?
   end
 
 

@@ -11,3 +11,9 @@ two:
   name: MyString
   description: MyText
   price: 9.99
+
+three:
+  id: 3
+  name: MyString
+  description: MyText
+  price: 9.99
