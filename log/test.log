@@ -2832,3 +2832,106 @@ Redirected to http://test.host/
 Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "bids"
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.2ms)[0m  ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "bids"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (1, 1, 9.99, '2015-07-03 22:17:09', '2015-07-03 22:17:09', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 22:17:09', '2015-07-03 22:17:09', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("id", "name", "description", "price", "created_at", "updated_at") VALUES (1, 'MyString', 'MyText', 9.99, '2015-07-03 22:17:09', '2015-07-03 22:17:09')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("id", "name", "description", "price", "created_at", "updated_at") VALUES (2, 'MyString', 'MyText', 9.99, '2015-07-03 22:17:09', '2015-07-03 22:17:09')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "products" ("id", "name", "description", "price", "created_at", "updated_at") VALUES (3, 'MyString', 'MyText', 9.99, '2015-07-03 22:17:09', '2015-07-03 22:17:09')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("id", "email", "role", "created_at", "updated_at") VALUES (1, 'gonzalo@desafiolatam.com', 0, '2015-07-03 22:17:09', '2015-07-03 22:17:09')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("id", "email", "created_at", "updated_at") VALUES (2, 'mario@gmail.com', '2015-07-03 22:17:09', '2015-07-03 22:17:09')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("id", "email", "created_at", "updated_at") VALUES (3, 'arnoldo@boletia.com', '2015-07-03 22:17:09', '2015-07-03 22:17:09')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------
+ProductTest: test_should_have_a_price
+-------------------------------------
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+ProductTest: test_should_have_a_name
+------------------------------------
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+ProductTest: test_should_have_a_price_>_0
+-----------------------------------------
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+PagesControllerTest: test_should_get_landing
+--------------------------------------------
+Processing by PagesController#landing as HTML
+  Rendered pages/landing.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2666ms (Views: 2665.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------
+BidTest: test_should_have_a_product
+-----------------------------------
+  [1m[36mBid Load (0.3ms)[0m  [1mSELECT  "bids".* FROM "bids" WHERE "bids"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+BidTest: test_should_have_an_user
+---------------------------------
+  [1m[35mBid Load (0.2ms)[0m  SELECT  "bids".* FROM "bids" WHERE "bids"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+Processing by ProductsController#index as HTML
+Redirected to http://test.host/
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------
+BidsControllerTest: test_guest_shouldnt_create_bids
+---------------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+Processing by BidsController#create as HTML
+  Parameters: {"bid"=>{"user_id"=>"1", "product_id"=>"3"}, "product_id"=>"3"}
+Unpermitted parameters: user_id, product_id
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://test.host/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "bids"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+BidsControllerTest: test_user_should_create_bids
+------------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "bids"
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Processing by BidsController#create as HTML
+  Parameters: {"bid"=>{"user_id"=>"2", "product_id"=>"3"}, "product_id"=>"3"}
+Unpermitted parameters: user_id, product_id
+Redirected to http://test.host/
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "bids"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+BidsControllerTest: test_seller_shouldnt_create_bids
+----------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+Processing by BidsController#create as HTML
+  Parameters: {"bid"=>{"user_id"=>"3", "product_id"=>"3"}, "product_id"=>"3"}
+Unpermitted parameters: user_id, product_id
+Redirected to http://test.host/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "bids"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
