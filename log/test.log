@@ -572,3 +572,294 @@ ProductTest: test_should_have_a_price_>_0
 -----------------------------------------
   [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 980190962]]
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (122.2ms)[0m  [1mDROP DATABASE IF EXISTS "deremate_test"[0m
+  [1m[35m (447.7ms)[0m  CREATE DATABASE "deremate_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.8ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.2ms)[0m  CREATE TABLE "bids" ("id" serial primary key, "user_id" integer, "product_id" integer, "amount" decimal, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX  "index_bids_on_product_id" ON "bids" USING btree ("product_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_bids_on_user_id" ON "bids" USING btree ("user_id")
+  [1m[36m (5.2ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "name" character varying, "description" text, "price" decimal, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (4.9ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "role" integer) 
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (2.9ms)[0m  [1mALTER TABLE "bids" ADD CONSTRAINT "fk_rails_4aac2f19d2"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  ALTER TABLE "bids" ADD CONSTRAINT "fk_rails_e173de2ed3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150703011911')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150700000000')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150701013538')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150701013841')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "bids"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)[0m
+  [1m[35mFixture Insert (1.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "bids"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)[0m
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "bids"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "bids"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)[0m
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "bids"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 980190962)[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:11:15', '2015-07-03 02:11:15', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "bids"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "bids"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)[0m
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "bids"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "bids"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "products"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)[0m
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "bids"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-07-03 02:12:01', '2015-07-03 02:12:01', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "bids"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:14:15', '2015-07-03 02:14:15', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:14:15', '2015-07-03 02:14:15', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:14:15', '2015-07-03 02:14:15', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:14:15', '2015-07-03 02:14:15', 298486374)[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('gonzalo@gmail.com', '2015-07-03 02:14:15', '2015-07-03 02:14:15', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('mario@gmail.com', '2015-07-03 02:14:15', '2015-07-03 02:14:15', 298486374)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+BidsControllerTest: test_should_get_create
+------------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+ProductTest: test_should_have_a_price_>_0
+-----------------------------------------
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+ProductTest: test_should_have_a_price
+-------------------------------------
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------
+ProductTest: test_should_have_a_name
+------------------------------------
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (37.8ms)
+  Rendered products/index.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 1622ms (Views: 1620.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (9.3ms)[0m  ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "bids" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "bids"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:15:26', '2015-07-03 02:15:26', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "bids" ("user_id", "product_id", "amount", "created_at", "updated_at", "id") VALUES (NULL, NULL, 9.99, '2015-07-03 02:15:26', '2015-07-03 02:15:26', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "products"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:15:26', '2015-07-03 02:15:26', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 9.99, '2015-07-03 02:15:26', '2015-07-03 02:15:26', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('gonzalo@gmail.com', '2015-07-03 02:15:26', '2015-07-03 02:15:26', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('mario@gmail.com', '2015-07-03 02:15:26', '2015-07-03 02:15:26', 298486374)
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "bids" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+BidsControllerTest: test_should_get_create
+------------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (27.4ms)
+  Rendered products/index.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 194ms (Views: 192.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------
+BidTest: test_should_have_a_product
+-----------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+BidTest: test_should_have_an_user
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+ProductTest: test_should_have_a_name
+------------------------------------
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------
+ProductTest: test_should_have_a_price
+-------------------------------------
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+ProductTest: test_should_have_a_price_>_0
+-----------------------------------------
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  ROLLBACK

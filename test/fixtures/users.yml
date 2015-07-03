@@ -1,7 +1,28 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+<<<<<<< Updated upstream
 one:
   email: MyString
 
 two:
   email: MyString
+=======
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+guest:
+  id: 1
+  email: gonzalo@desafiolatam.com
+  role: 0
+
+user:
+  id: 2
+  email: mario@gmail.com
+
+seller:
+  id: 3
+  email: arnoldo@boletia.com
+
+#  column: value
+>>>>>>> Stashed changes
