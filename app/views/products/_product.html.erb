@@ -1,0 +1,5 @@
+<%= form_for [product, product.bids.build] do |f| %>
+	<%= f.number_field :amount %>
+	<%= product.name %>
+	<%= f.submit "Ofertar" %>
+<% end %>	
