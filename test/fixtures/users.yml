@@ -12,7 +12,9 @@ guest:
 user:
   id: 2
   email: mario@gmail.com
+  role: 1
 
 seller:
   id: 3
   email: arnoldo@boletia.com
+  role: 2

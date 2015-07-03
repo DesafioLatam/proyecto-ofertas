@@ -9,13 +9,15 @@ class BidsControllerTest < ActionController::TestCase
 
     post :create, bid: {user_id: user, product_id: products(:three)}, product_id: products(:three)    
     assert_equal 2, Bid.count
-    assert_redirected_to pages_landing_path
+    assert_redirected_to root_path
   end
 
   test "user should create bids" do
     user = users(:user)
+    sign_in user
+
     assert_difference('Bid.count') do
-      post :create, bid: {user_id: user, product_id: products(:three)}, product_id: products(:three)    
+      post :create, bid: {user_id: user.id, product_id: products(:three).id, amount: 10}, product_id: products(:three)    
     end
     assert_redirected_to products_path
   end
@@ -24,6 +26,6 @@ class BidsControllerTest < ActionController::TestCase
     user = users(:seller)
     post :create, bid: {user_id: user, product_id: products(:three)}, product_id: products(:three)    
     assert_equal 2, Bid.count
-    assert_redirected_to pages_landing_path
+    assert_redirected_to root_path
   end
 end
