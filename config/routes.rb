@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   devise_for :users  
   get 'users/dashboard'
+  get 'users/buy_credits'
+  post 'users/process_credits'
   
   resources :products, only: [:index, :create, :new] do
     resources :bids, only: [:create]

@@ -9,4 +9,11 @@ class UsersController < ApplicationController
       .pluck('products.name, count(bids.id) as count_bids')
   end
 
+  def buy_credits
+  end
+
+  def process_credits
+    current_user.credits += params[:amount]
+    render json: params
+  end
 end

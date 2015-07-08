@@ -1,0 +1,13 @@
+.container
+	h2 Compra créditos
+	.well
+		= form_tag users_process_credits_path, class:"form" do
+
+			.form-group
+				= label_tag :amount, "Monto"
+				= number_field_tag :amount, 10, class:"form-control"
+
+			.form-group
+				.pull-right
+					= submit_tag "Comprar", class: "btn btn-primary"
+				.clearfix
