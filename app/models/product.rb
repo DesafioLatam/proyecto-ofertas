@@ -7,6 +7,6 @@ class Product < ActiveRecord::Base
   #   Product.last(10)
   # end
   scope :products_and_bids_count, -> { Product.joins("LEFT JOIN bids ON bids.product_id = products.id").select("products.*").group("products.id, bids.product_id") }
-
+  belongs_to :user
 
 end
