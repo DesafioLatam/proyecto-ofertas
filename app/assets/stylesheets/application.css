@@ -11,5 +11,7 @@
  * file per style scope.
  *
  *= require _bootstrap
+ *= require bids
+ *= require pages
  *= require_self
  */

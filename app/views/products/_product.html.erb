@@ -1,11 +1,11 @@
 <div class="col-md-3">
-<div class="thumbnail">
-<%= form_for [product, product.bids.build] do |f| %>
-	<p> <%= product.name %></p>
-	<%= f.number_field :amount %>
-	<p>
-	<%= f.submit "Ofertar", class: "btn btn-primary" %>
-	</p>
-<% end %>	
-</div>
+	<div class="thumbnail">
+		<%= form_for [product, product.bids.build] do |f| %>
+			<p> <%= product.name %></p>
+			<%= f.number_field :amount %>
+			<p>
+			<%= f.submit "Ofertar", class: "btn btn-primary" %>
+			</p>
+		<% end %>	
+	</div>
 </div>
