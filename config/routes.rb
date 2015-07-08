@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get 'pages/landing'
 
-  devise_for :users
-
-  resources :products, only: [:index] do
+  devise_for :users  
+  get 'users/dashboard'
+  
+  resources :products, only: [:index, :create] do
     resources :bids, only: [:create]
   end
 

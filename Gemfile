@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'cancancan'
 gem 'activeadmin', github: 'activeadmin'
+gem 'slim'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
