@@ -1,14 +1,31 @@
+= javascript_include_tag "//www.google.com/jsapi", "chartkick" 
+
+
 .container
+	p= link_to "Crear producto nuevo", new_product_path
+
 	- if @products.empty?
 		| No tienes productos todavía	
+
 	- else
-		table.table.table-zebra
-			thead
-				tr
-					th Producto
-					th Ofertas
-			tbody
-				- @products.each do |product|
-					tr
-						td = product.name
-						td = product.bids.size
+		.col-md-6
+			.well
+				h2 Productos
+				table.table.table-striped.table-bordered
+					thead
+						tr
+							th Producto
+							th Ofertas
+					tbody
+						- @products.each do |product|
+							tr
+								td = product.name
+								td = product.bids.size
+		.col-md-6
+			.well
+				h2 Gráfico de ofertas por producto
+				= column_chart @bids_with_products
+
+			.well
+				h2 Gráfico de ofertas en el tiempo
+				= line_chart @user.bids.group_by_day("bids.created_at").count

@@ -16,3 +16,9 @@ seller = User.create(email:"vendedor@gmail.com", password:"12345678", role:2)
 100.times do |i|
   Product.create(name:"Producto #{i}", description:"generico", price:100, user:seller)
 end
+
+Product.all.sample(5).each do |product| 
+  50.times do |i|
+    Bid.create(amount:10, user:user, product:product, created_at: Time.now - rand(1..30).day)
+  end
+end

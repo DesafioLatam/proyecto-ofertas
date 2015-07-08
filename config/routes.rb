@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   devise_for :users  
   get 'users/dashboard'
   
-  resources :products, only: [:index, :create] do
+  resources :products, only: [:index, :create, :new] do
     resources :bids, only: [:create]
   end
 

@@ -17,6 +17,8 @@ gem 'devise'
 gem 'cancancan'
 gem 'activeadmin', github: 'activeadmin'
 gem 'slim'
+gem 'chartkick'
+gem 'groupdate'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

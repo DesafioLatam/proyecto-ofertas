@@ -1,0 +1,16 @@
+.container
+	.well
+		= form_for @product, class:"form" do |f| 
+			.form-group
+				= f.label :name, "Nombre" 
+				= f.text_field :name, class: 'form-control'
+			.form-group
+				= f.label :price, "Precio"  
+				= f.text_field :price, class: 'form-control'
+			.form-group
+				= f.label :description, "Descripción"
+				= f.text_field :description, class: 'form-control'
+			.form-group
+				.pull-right
+					= f.submit "Enviar", class:"btn btn-primary" 
+				.clearfix

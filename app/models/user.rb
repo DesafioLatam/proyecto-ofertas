@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   enum role: [ :guest, :user, :seller ]
   has_many :products
+  has_many :bids, through: :products
 end
