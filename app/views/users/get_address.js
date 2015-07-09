@@ -1,1 +1,0 @@
-$("#address").val("<%= j @address %>");

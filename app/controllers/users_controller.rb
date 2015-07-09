@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     @address = user.address
     respond_to do |format|
       format.js
+      format.json { render json: @address.to_json }
     end
     #render json:params
   end

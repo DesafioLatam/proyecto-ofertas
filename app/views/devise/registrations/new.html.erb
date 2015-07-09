@@ -53,12 +53,18 @@
           navigator.geolocation.getCurrentPosition(getAddress);
       }
   }
-
+  $.aj
   function getAddress(position){
     $.ajax({
       url:"/users/get_address",
       method: "GET",
+      dataType: "json",
       data: { latitude: position.coords.latitude , longitude: position.coords.longitude }
+    })
+
+    .done(function(xhr)
+    {
+      $("#address").val(xhr);
     })
 
     .always(function() {
