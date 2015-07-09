@@ -20,6 +20,7 @@ gem 'slim'
 gem 'chartkick'
 gem 'groupdate'
 gem 'geocoder'
+gem 'gmaps4rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
