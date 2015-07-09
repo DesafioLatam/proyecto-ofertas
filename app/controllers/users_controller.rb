@@ -16,4 +16,15 @@ class UsersController < ApplicationController
     current_user.credits += params[:amount]
     render json: params
   end
+
+  def get_address
+    user = User.new(latitude: params[:latitude], longitude: params[:longitude])
+    user.reverse_geocode
+    @address = user.address
+    respond_to do |format|
+      format.js
+    end
+    #render json:params
+  end
+
 end
