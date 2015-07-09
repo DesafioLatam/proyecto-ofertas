@@ -1,5 +1,7 @@
+<div class="container">
 <h2>Sign up</h2>
 
+<div class="well">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -24,7 +26,7 @@
   <div class="field">
     <%= f.label :address %><br />
     <%= f.text_field :address, id: "address" %>
-    <button type="button" id="buscame">Búscame</button>
+    <button type="button" id="buscame" class="btn btn-primary">Búscame</button>
   </div>
 
 
@@ -34,12 +36,17 @@
 
 <% end %>
 
+</div>
+</div>
 
 <%= render "devise/shared/links" %>
 
 <script>
 
-  $("#buscame").click(getLocation)
+  $("#buscame").on('click', function(event){
+    $("#buscame").attr('disabled', 'disabled');  
+    getLocation()
+  });
 
   function getLocation() {
       if (navigator.geolocation) {
@@ -52,7 +59,13 @@
       url:"/users/get_address",
       method: "GET",
       data: { latitude: position.coords.latitude , longitude: position.coords.longitude }
+    })
+
+    .always(function() {
+      $("#buscame").removeAttr("disabled");
+
     });
+    
   }
 
 </script>
