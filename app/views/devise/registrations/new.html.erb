@@ -21,9 +21,38 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, id: "address" %>
+    <button type="button" id="buscame">Búscame</button>
+  </div>
+
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
 <% end %>
 
+
 <%= render "devise/shared/links" %>
+
+<script>
+
+  $("#buscame").click(getLocation)
+
+  function getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(getAddress);
+      }
+  }
+
+  function getAddress(position){
+    $.ajax({
+      url:"/users/get_address",
+      method: "GET",
+      data: { latitude: position.coords.latitude , longitude: position.coords.longitude }
+    });
+  }
+
+</script>

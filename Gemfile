@@ -19,6 +19,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'slim'
 gem 'chartkick'
 gem 'groupdate'
+gem 'geocoder'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -49,4 +50,3 @@ group :development, :test do
   gem 'spring'
   gem "shoulda-matchers"
 end
-
