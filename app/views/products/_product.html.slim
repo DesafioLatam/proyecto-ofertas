@@ -1,0 +1,11 @@
+.col-md-3
+	= form_for [product, product.bids.build] do |f|
+		.thumbnail
+			p
+				= product.name 
+			small= product.user.email 
+			hr
+			p.pull-right
+				= f.number_field :amount, style: "width: 50px; border-width: 0 0 1px 0; text-align:right"
+				= f.submit "Ofertar", class: "btn btn-xs btn-primary", style:"border-radius:0px"
+			.clearfix
