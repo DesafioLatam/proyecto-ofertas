@@ -77,7 +77,32 @@ $(document).ready(function() {
     ]);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
+
+    google.maps.event.addListener(handler.getMap(), 'click', function(e) {
+
+      handler.map.centerOn(e.latLng);
+
+    $.ajax({
+      url:"/users/get_address",
+      method: "GET",
+      dataType: "json",
+      data: { latitude: e.latLng.k , longitude: e.latLng.D }
+    })
+
+    .done(function(xhr)
+    {
+      $("#address").val(xhr);
+    })
+
+    .always(function() {
+      $("#buscame").removeAttr("disabled");
+
+    });
+
+    });
+
   });  
+
 
 
   $("#buscame").on('click', function(event){
@@ -110,8 +135,9 @@ $(document).ready(function() {
       $("#buscame").removeAttr("disabled");
 
     });
-
   }
+
+    
 });
 
 
