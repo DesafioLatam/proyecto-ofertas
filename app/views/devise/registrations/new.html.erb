@@ -51,54 +51,28 @@
   <%= render "devise/shared/links" %>
 </div> <!-- End of container -->
 
-
-<% @users = User.all %>
-<% @hash = Gmaps4rails.build_markers(@users) do |user, marker| %>
-<% marker.lat user.latitude %>
-<% marker.lng user.longitude %>
-<% end %>
-
 <script>
 var handler;
 $(document).ready(function() {
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers([
-    {
-      "lat": 0,
-      "lng": 0,
-      "picture": {
-        "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-        "width":  36,
-        "height": 36
-      },
-      "infowindow": "hello!"
-    }
-    ]);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
+    handler.getMap().setZoom(10);
 
     google.maps.event.addListener(handler.getMap(), 'click', function(e) {
-
+      console.log(e)
       handler.map.centerOn(e.latLng);
 
-    $.ajax({
-      url:"/users/get_address",
-      method: "GET",
-      dataType: "json",
-      data: { latitude: e.latLng.k , longitude: e.latLng.D }
-    })
+      $.ajax({
+        url:"/users/get_address",
+        method: "GET",
+        dataType: "json",
+        data: { latitude: e.latLng.k , longitude: e.latLng.D }
+      })
 
-    .done(function(xhr)
-    {
-      $("#address").val(xhr);
-    })
-
-    .always(function() {
-      $("#buscame").removeAttr("disabled");
-
-    });
-
+      .done(function(xhr)
+      {
+        $("#address").val(xhr);
+      })
     });
 
   });  

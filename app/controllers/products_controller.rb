@@ -4,13 +4,16 @@ class ProductsController < ApplicationController
   def index
     if params[:latitude] && params[:longitude]       
       @my_pos = User.new(latitude:params[:latitude], longitude: params[:longitude])
-      sellers = @my_pos.nearbys(2).select(:id)
-      sellers_id = sellers.collect(&:id)
+      @sellers = @my_pos.nearbys(2)
+      sellers_id = @sellers.collect(&:id)
       @products = Product.where("user_id in (?)", sellers_id)
     else
       @products = Product.all
     end
-
+    respond_to do |f|
+      f.js
+      f.html
+    end
   end
 
   def new

@@ -4,7 +4,8 @@ script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclust
 
 section.container
   .col-md-8
-    = render partial: "product", collection: @products
+    #products
+      = render partial: "product", collection: @products
   .col-md-4
     #map style="width:100%; height:400px;"
 
@@ -12,13 +13,14 @@ section.container
 javascript:
   var handler;
   $(document).ready(function() {
-    var current_center = new google.maps.LatLng(#{params[:latitude] ||current_user.latitude}, #{params[:longitude] || current_user.longitude})
 
     handler = Gmaps.build('Google');
-    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ 
+      var current_center = new google.maps.LatLng(#{params[:latitude] ||current_user.latitude}, #{params[:longitude] || current_user.longitude})
+
       handler.getMap().setZoom(12);
       handler.getMap().setCenter(current_center);
-      radiusCircle = new google.maps.Circle({
+      var radiusCircle = new google.maps.Circle({
         strokeColor: '#FF0000',
         strokeOpacity: 0.8,
         strokeWeight: 2,
@@ -29,10 +31,33 @@ javascript:
         radius: (2 / 0.000621371) // two miles in meters
 
       });
-    });
 
-    google.maps.event.addListener(handler.getMap(), 'click', function(e) {
-      window.location.href = "#{products_path}?latitude=" + e.latLng.k + "&longitude=" + e.latLng.D
-    });
+      google.maps.event.addListener(handler.getMap(), 'click', function(e){
+        radiusCircle.setMap(null);
+        $.ajax({
+          url:"#{products_path}",
+          method: "GET",
+          dataType: "script",
+          data: { latitude: e.latLng.k , longitude: e.latLng.D }
+        })
+        .done(function(xhr){
+          console.log(xhr);
+          handler.getMap().setCenter(e.latLng);
+          handler.getMap().setZoom(12);
+          radiusCircle = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: handler.getMap(),
+            center: e.latLng,
+            radius: (2 / 0.000621371) // two miles in meters
 
+          });
+
+
+        })
+      });
+    });
   });
