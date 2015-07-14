@@ -13,12 +13,13 @@ class BidsControllerTest < ActionController::TestCase
   end
 
   test "user should create bids" do
-    user = users(:user)
+    user = users(:user2)
     sign_in user
 
     assert_difference('Bid.count') do
       post :create, bid: {user_id: user.id, product_id: products(:three).id, amount: 10}, product_id: products(:three)    
     end
+
     assert_redirected_to products_path
   end
 

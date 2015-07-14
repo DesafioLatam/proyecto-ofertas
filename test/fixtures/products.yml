@@ -5,15 +5,18 @@ one:
   name: MyString
   description: MyText
   price: 9.99
+  user_id: 3
 
 two:
   id: 2
   name: MyString
   description: MyText
   price: 9.99
+  user_id: 3
 
 three:
   id: 3
   name: MyString
   description: MyText
   price: 9.99
+  user_id: 3
