@@ -18,3 +18,9 @@ seller:
   id: 3
   email: arnoldo@boletia.com
   role: 2
+
+user2:
+  id: 4
+  email: mario-copia@gmail.com
+  role: 1
+
