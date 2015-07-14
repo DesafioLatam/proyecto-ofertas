@@ -3,7 +3,8 @@
 		.thumbnail
 			p
 				= product.name 
-			small= product.user.email 
+			/small= product.user.email 
+			small.time-to-expire = product.expiration_time - Time.now 
 			hr
 			p.pull-right
 				= f.number_field :amount, style: "width: 50px; border-width: 0 0 1px 0; text-align:right"

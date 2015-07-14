@@ -6,6 +6,9 @@ one:
   amount: 9.99
 
 two:
-  user_id: 
-  product_id: 
+  user_id: 4
+  product_id: 1
   amount: 9.99
+
+
+

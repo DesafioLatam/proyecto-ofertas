@@ -6,6 +6,7 @@ one:
   description: MyText
   price: 9.99
   user_id: 3
+  created_at: <%= Time.now %>
 
 two:
   id: 2
@@ -13,6 +14,7 @@ two:
   description: MyText
   price: 9.99
   user_id: 3
+  created_at: <%= Time.now %>
 
 three:
   id: 3
@@ -20,3 +22,12 @@ three:
   description: MyText
   price: 9.99
   user_id: 3
+  created_at: <%= Time.now %>
+
+expired:
+  id: 4
+  name: MyString
+  description: MyText
+  price: 9.99
+  user_id: 3
+  created_at: <%= Time.now - 2.days %>

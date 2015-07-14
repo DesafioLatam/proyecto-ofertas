@@ -14,6 +14,32 @@ javascript:
   var handler;
   $(document).ready(function() {
 
+  
+    // Timer
+    setInterval(function()
+    {
+      var times_to_expire = $('.time-to-expire') 
+      $.each(times_to_expire, function(index, string){
+        time_left_string = $(this).html()
+        time_left_integer = parseInt(time_left_string)
+        
+        if (time_left_integer > 0)
+        {
+          $(this).html(time_left_integer - 1)
+        }
+        else
+        {
+          $(this).html("Expirado")
+          $(this).toggleClass("time-to-expire")
+        }
+
+
+        })
+
+    }, 1000)
+    
+    
+    // Googlempas
     handler = Gmaps.build('Google');
     handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ 
       var current_center = new google.maps.LatLng(#{params[:latitude] ||current_user.latitude}, #{params[:longitude] || current_user.longitude})
